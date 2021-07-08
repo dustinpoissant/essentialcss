@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colors - Essential CSS</title>
+  <link rel="stylesheet" href="/src/essential.css" />
+  <link rel="stylesheet" href="/src/hljs.min.css" />
+</head>
+<body>
+  <details class="bg-primary" style="position:sticky;top:0">
+    <summary class="d-b p">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+      Navigation Menu
+    </summary>
+    <nav class="bt">
+      <a href="/">Home</a>
+      <a href="/typography.html">Typography</a>
+      <a href="/buttons.html">Buttons</a>
+      <a href="/inputs.html">Inputs</a>
+      <a href="/tables.html">Tables</a>
+      <a href="/spacing.html">Spacing and Borders</a>
+      <a href="/layouts.html">Layouts</a>
+      <a href="/colors.html">Colors</a>
+      <a href="/utility-classes.html">Utility Classes</a>
+      <a href="/semantic-elements.html">Sematics Elements</a>
+      <a href="/css-custom-props.html">CSS Custom Properties</a>
+    </nav>
+  </details>
+  <main>
+    <h1 class="ta-center">Colors</h1>
+    <h3 class="bb">Backgrounds</h3>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bg-alt"</span>&gt;</span>Alternate<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bg-primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bg-secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bg-success"</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bg-warning"</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bg-danger"</span>&gt;</span>Danger<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bg-inv"</span>&gt;</span>Inverse<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <p class="p bg-alt">Alternate</p>
+        <p class="p bg-primary">Primary</p>
+        <p class="p bg-secondary">Secondary</p>
+        <p class="p bg-success">Success</p>
+        <p class="p bg-warning">Warning</p>
+        <p class="p bg-danger">Danger</p>
+        <p class="p bg-inv">Inverse</p>
+      </div>
+    </div>
+
+    <h3 class="bb">Text Colors</h3>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tc-primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tc-secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tc-success"</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tc-warning"</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tc-danger"</span>&gt;</span>Danger<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <p class="tc-primary">Primary</p>
+        <p class="tc-secondary">Secondary</p>
+        <p class="tc-success">Success</p>
+        <p class="tc-warning">Warning</p>
+        <p class="tc-danger">Danger</p>
+      </div>
+    </div>
+    <h5>Text Colors on Inverse</h5>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bg-inv"</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tc-primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tc-secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tc-success"</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tc-warning"</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tc-danger"</span>&gt;</span>Danger<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <div class="bg-inv p pb0">
+          <p class="tc-primary">Primary</p>
+          <p class="tc-secondary">Secondary</p>
+          <p class="tc-success">Success</p>
+          <p class="tc-warning">Warning</p>
+          <p class="tc-danger">Danger</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div style="height: 33vh"></div>
+</body>
+</html>

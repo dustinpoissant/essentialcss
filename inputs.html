@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inputs - Essential CSS</title>
+  <link rel="stylesheet" href="/src/essential.css" />
+  <link rel="stylesheet" href="/src/hljs.min.css" />
+</head>
+<body>
+  <details class="bg-primary" style="position:sticky;top:0">
+    <summary class="d-b p">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+      Navigation Menu
+    </summary>
+    <nav class="bt">
+      <a href="/">Home</a>
+      <a href="/typography.html">Typography</a>
+      <a href="/buttons.html">Buttons</a>
+      <!-- <a href="/inputs.html">Inputs</a> -->
+      <a href="/tables.html">Tables</a>
+      <a href="/spacing.html">Spacing and Borders</a>
+      <a href="/layouts.html">Layouts</a>
+      <a href="/colors.html">Colors</a>
+      <a href="/utility-classes.html">Utility Classes</a>
+      <a href="/semantic-elements.html">Sematics Elements</a>
+      <a href="/css-custom-props.html">CSS Custom Properties</a>
+    </nav>
+  </details>
+  <main>
+    <h1 class="ta-center">Inputs</h1>
+    <h3 class="bb">Text Inputs</h3>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input"</span>&gt;</span>Input Label:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter some text"</span> /&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"textarea"</span>&gt;</span>Textarea Label:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"textarea"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter multiple lines of text"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <label for="input">Input Label:</label>
+        <input id="input" placeholder="Enter some text" />
+        <label for="textarea">Textarea Label:</label>
+        <textarea id="textarea" placeholder="Enter multiple lines of text"></textarea>
+      </div>
+    </div>
+
+    <h3 class="bb">Selects</h3>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"select"</span>&gt;</span>Select Label:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"select"</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Option 1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Option 4<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Option 5<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br /><span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"multiselect"</span>&gt;</span>Multi-Select Label:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"multiselect"</span> <span class="hljs-attr">multiple</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Option 1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Option 4<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Option 5<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br /><span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <label for="select">Select Label:</label>
+        <select id="select">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+          <option>Option 4</option>
+          <option>Option 5</option>
+        </select>
+        <label for="multiselect">Multi-Select Label:</label>
+        <select id="multiselect" multiple>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+          <option>Option 4</option>
+          <option>Option 5</option>
+        </select>
+      </div>
+    </div>
+
+    <h3 class="bb">Checkboxes and Radios</h3>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkbox"</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> /&gt;</span><br />  Check Me<br /><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"b r pt px pbh"</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"radio1"</span>&gt;</span><br />    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radio1"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio"</span> /&gt;</span><br />    Radio 1<br />  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"radio2"</span>&gt;</span><br />    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radio2"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio"</span> /&gt;</span><br />    Radio 2<br />  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><br /><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <label for="checkbox">
+          <input id="checkbox" type="checkbox" />
+          Check Me
+        </label>
+        <div class="b r pt px pbh">
+          <label for="radio1">
+            <input id="radio1" type="radio" name="radio" />
+            Radio 1
+          </label>
+          <label for="radio2">
+            <input id="radio2" type="radio" name="radio" />
+            Radio 2
+          </label>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div style="height: 33vh"></div>
+</body>
+</html>

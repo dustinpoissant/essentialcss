@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buttons - Essential CSS</title>
+  <link rel="stylesheet" href="/src/essential.css" />
+  <link rel="stylesheet" href="/src/hljs.min.css" />
+</head>
+<body>
+  <details class="bg-primary" style="position:sticky;top:0">
+    <summary class="d-b p">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+      Navigation Menu
+    </summary>
+    <nav class="bt">
+      <a href="/">Home</a>
+      <a href="/typography.html">Typography</a>
+      <!-- <a href="/buttons.html">Buttons</a> -->
+      <a href="/inputs.html">Inputs</a>
+      <a href="/tables.html">Tables</a>
+      <a href="/spacing.html">Spacing and Borders</a>
+      <a href="/layouts.html">Layouts</a>
+      <a href="/colors.html">Colors</a>
+      <a href="/utility-classes.html">Utility Classes</a>
+      <a href="/semantic-elements.html">Sematics Elements</a>
+      <a href="/css-custom-props.html">CSS Custom Properties</a>
+    </nav>
+  </details>
+  <main>
+    <h1 class="ta-center">Buttons</h1>
+    <h3 class="bb">Creating a Button</h3>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>Button Element<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span>&gt;</span>"btn" Class<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Inputs"</span> /&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> /&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"reset"</span> /&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <button class="mb">Button Element</button>
+        <a href="javascript:void(0)" class="btn mb">"btn" Class</a>
+        <input type="button" value="Inputs" class="mb" />
+        <input type="submit" class="mb" />
+        <input type="reset" class="mb" />
+      </div>
+    </div>
+    <h3 class="bb">Colors</h3>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>Default<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"success"</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"warning"</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"danger"</span>&gt;</span>Danger<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <button class="mb">Default</button>
+        <button class="mb primary">Primary</button>
+        <button class="mb secondary">Secondary</button>
+        <button class="mb success">Success</button>
+        <button class="mb warning">Warning</button>
+        <button class="mb danger">Danger</button>
+      </div>
+    </div>
+    <h3 class="bb">Groups</h3>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-grp"</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br /><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <div class="btn-grp mb">
+          <button>Button</button>
+          <button>Button</button>
+        </div>
+      </div>
+    </div>
+    <h3 class="bb">"no-btn" class</h3>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"no-btn"</span>&gt;</span>"no-btn" Class<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <button class="no-btn">"no-btn" Class</button>
+      </div>
+    </div>
+  </main>
+  <div style="height: 33vh"></div>
+</body>
+</html>

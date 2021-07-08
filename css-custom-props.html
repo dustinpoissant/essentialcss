@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Custom Properties - Essential CSS</title>
+  <link rel="stylesheet" href="/src/essential.css" />
+  <link rel="stylesheet" href="/src/hljs.min.css" />
+  <style>
+    .color {
+      display: inline-block;
+      width: 1.35em;
+      height: 1.35em;
+      border: 1px solid var(--c_border);
+      vertical-align: top;
+      border-radius: var(--radius);
+    }
+  </style>
+</head>
+<body>
+  <details class="bg-primary" style="position:sticky;top:0">
+    <summary class="d-b p">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+      Navigation Menu
+    </summary>
+    <nav class="bt">
+      <a href="/">Home</a>
+      <a href="/typography.html">Typography</a>
+      <a href="/buttons.html">Buttons</a>
+      <a href="/inputs.html">Inputs</a>
+      <a href="/tables.html">Tables</a>
+      <a href="/spacing.html">Spacing and Borders</a>
+      <a href="/layouts.html">Layouts</a>
+      <a href="/colors.html">Colors</a>
+      <a href="/utility-classes.html">Utility Classes</a>
+      <a href="/semantic-elements.html">Sematics Elements</a>
+      <a href="/css-custom-props.html">CSS Custom Properties</a>
+    </nav>
+  </details>
+  <main>
+    <h1 class="ta-center">CSS Custom Properties</h1>
+
+    <h3 class="bb">Background Colors</h3>
+    <p>Each background color is a set, one color for the "light mode" and one for the "dark mode".</p>
+    <div class="table-wrapper mb">
+      <table>
+        <colgroup>
+          <col style="width: 25%;">
+          <col style="width: 25%;">
+          <col style="width: 50%;">
+       </colgroup>
+        <thead>
+          <th>Property</th>
+          <th>Default Value</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>--lc_bg</td>
+            <td>
+              <div class="color" style="background:#f9f9f9"></div>
+              #f9f9f9
+            </td>
+            <td>Light Background Color</td>
+          </tr>
+          <tr>
+            <td>--dc_bg</td>
+            <td>
+              <div class="color" style="background:#333"></div>
+              #333333
+            </td>
+            <td>Dark Background Color</td>
+          </tr>
+          <tr>
+            <td>--lc_bg__overscroll</td>
+            <td>
+              <div class="color" style="background:white"></div>
+              white
+            </td>
+            <td>Light Background Overscroll Color</td>
+          </tr>
+          <tr>
+            <td>--dc_bg__overscroll</td>
+            <td>
+              <div class="color" style="background:black"></div>
+              black
+            </td>
+            <td>Dark Background Overscroll Color</td>
+          </tr>
+          <tr>
+            <td>--lc_bg__alt</td>
+            <td>
+              <div class="color" style="background:#eee"></div>
+              #eeeeee
+            </td>
+            <td>Light Alternate Background Color</td>
+          </tr>
+          <tr>
+            <td>--dc_bg__alt</td>
+            <td>
+              <div class="color" style="background:#222"></div>
+              #222222
+            </td>
+            <td>Dark Alternate Background Color</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h6 class="mb0">Read Only</h6>
+    <p><small>Use it, but don't modify it.</small></p>
+    <div class="table-wrapper mb">
+      <table>
+        <colgroup>
+          <col style="width: 20%;">
+          <col style="width: 40%;">
+          <col style="width: 20%;">
+          <col style="width: 20%;">
+       </colgroup>
+        <thead>
+          <th>Property</th>
+          <th>Description</th>
+          <th>Light Theme Value</th>
+          <th>Dark Theme Value</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>--c_bg</td>
+            <td>Background Color</td>
+            <td>var(--lc_bg)</td>
+            <td>var(--dc_bg)</td>
+          </tr>
+          <tr>
+            <td>--c_bg__overscroll</td>
+            <td>Background Overscroll Color</td>
+            <td>var(--lc_bg__overscroll)</td>
+            <td>var(--dc_bg__overscroll)</td>
+          </tr>
+          <tr>
+            <td>--c_bg__alt</td>
+            <td>Alternate Background Color</td>
+            <td>var(--lc_bg__alt)</td>
+            <td>var(--dc_bg__alt)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="bb">Border Colors</h3>
+    <div class="table-wrapper mb">
+      <table>
+        <colgroup>
+          <col style="width: 25%;">
+          <col style="width: 25%;">
+          <col style="width: 50%;">
+        </colgroup>
+        <thead>
+          <th>Property</th>
+          <th>Default Value</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>--lc_border</td>
+            <td>
+              <div class="color" style="background:#ccc"></div>
+              #cccccc
+            </td>
+            <td>Light Background Color</td>
+          </tr>
+          <tr>
+            <td>--dc_border</td>
+            <td>
+              <div class="color" style="background:#777"></div>
+              #777777
+            </td>
+            <td>Light Background Color</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h6 class="mb0">Read Only</h6>
+    <p><small>Use it, but don't modify it.</small></p>
+    <div class="table-wrapper mb">
+      <table>
+        <colgroup>
+          <col style="width: 20%;">
+          <col style="width: 40%;">
+          <col style="width: 20%;">
+          <col style="width: 20%;">
+       </colgroup>
+        <thead>
+          <th>Property</th>
+          <th>Description</th>
+          <th>Light Theme Value</th>
+          <th>Dark Theme Value</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>--c_border</td>
+            <td>Border Color</td>
+            <td>var(--lc_border)</td>
+            <td>var(--dc_border)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="bb mt">Colors</h3>
+    <p>Each color has a base color and a hover color.</p>
+    <div class="table-wrapper mb">
+      <table>
+        <colgroup>
+          <col style="width: 25%;">
+          <col style="width: 25%;">
+          <col style="width: 50%;">
+        </colgroup>
+        <thead>
+          <th>Property</th>
+          <th>Default Value</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>--c_primary</td>
+            <td>
+              <div class="color" style="background:#36f"></div>
+              #3366ff
+            </td>
+            <td>Primary Color</td>
+          </tr>
+          <tr>
+            <td>--c_primary__hover</td>
+            <td>
+              <div class="color" style="background:#14d"></div>
+              #1144dd
+            </td>
+            <td>Primary Color Hovered</td>
+          </tr>
+          <tr>
+            <td>--c_secondary</td>
+            <td>
+              <div class="color" style="background:#93f"></div>
+              #9933ff
+            </td>
+            <td>Secondary Color</td>
+          </tr>
+          <tr>
+            <td>--c_secondary__hover</td>
+            <td>
+              <div class="color" style="background:#71d"></div>
+              #7711dd
+            </td>
+            <td>Secondary Color Hovered</td>
+          </tr>
+          <tr>
+            <td>--c_success</td>
+            <td>
+              <div class="color" style="background:#080"></div>
+              #008800
+            </td>
+            <td>Success Color</td>
+          </tr>
+          <tr>
+            <td>--c_success__hover</td>
+            <td>
+              <div class="color" style="background:#060"></div>
+              #006600
+            </td>
+            <td>Success Color Hovered</td>
+          </tr>
+          <tr>
+            <td>--c_warning</td>
+            <td>
+              <div class="color" style="background:#f60"></div>
+              #ff6600
+            </td>
+            <td>Warning Color</td>
+          </tr>
+          <tr>
+            <td>--c_warning__hover</td>
+            <td>
+              <div class="color" style="background:#d40"></div>
+              #dd4400
+            </td>
+            <td>Warning Color Hovered</td>
+          </tr>
+          <tr>
+            <td>--c_danger</td>
+            <td>
+              <div class="color" style="background:#f03"></div>
+              #ff0033
+            </td>
+            <td>Danger Color</td>
+          </tr>
+          <tr>
+            <td>--c_danger__hover</td>
+            <td>
+              <div class="color" style="background:#d01"></div>
+              #dd0011
+            </td>
+            <td>Danger Color Hovered</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="bb mt">Text Colors</h3>
+    <p>Each text color is a set, one color for the "light mode" and one for the "dark mode".</p>
+    <div class="table-wrapper mb">
+      <table>
+        <colgroup>
+          <col style="width: 25%;">
+          <col style="width: 25%;">
+          <col style="width: 50%;">
+        </colgroup>
+        <thead>
+          <th>Property</th>
+          <th>Default Value</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>--tc_dark</td>
+            <td>
+              <div class="color" style="background:var(--tc_dark)"></div>
+              rgba(0, 0, 0, 0.93)
+            </td>
+            <td>Dark Text Color</td>
+          </tr>
+          <tr>
+            <td>--tc_light</td>
+            <td>
+              <div class="color" style="background:var(--tc_light)"></div>
+              rgba(255, 255, 255, 0.93)
+            </td>
+            <td>Light Text Color</td>
+          </tr>
+          <tr>
+            <td>--ltc_primary</td>
+            <td>
+              <div class="color" style="background:var(--ltc_primary)"></div>
+              #6699ff
+            </td>
+            <td>Light Primary Text Color</td>
+          </tr>
+          <tr>
+            <td>--dtc_primary</td>
+            <td>
+              var(--c_primary)
+            </td>
+            <td>Dark Primary Text Color</td>
+          </tr>
+          <tr>
+            <td>--ltc_secondary</td>
+            <td>
+              <div class="color" style="background:var(--ltc_secondary)"></div>
+              #bb66ff
+            </td>
+            <td>Light Secondary Text Color</td>
+          </tr>
+          <tr>
+            <td>--dtc_secondary</td>
+            <td>
+              var(--c_secondary)
+            </td>
+            <td>Dark Secondary Text Color</td>
+          </tr>
+          <tr>
+            <td>--ltc_success</td>
+            <td>
+              <div class="color" style="background:var(--ltc_success)"></div>
+              #66bb66
+            </td>
+            <td>Light Success Text Color</td>
+          </tr>
+          <tr>
+            <td>--dtc_success</td>
+            <td>
+              var(--c_success)
+            </td>
+            <td>Dark Success Text Color</td>
+          </tr>
+          <tr>
+            <td>--ltc_warning</td>
+            <td>
+              <div class="color" style="background:var(--ltc_warning)"></div>
+              #ff9933
+            </td>
+            <td>Light Warning Text Color</td>
+          </tr>
+          <tr>
+            <td>--dtc_warning</td>
+            <td>
+              var(--c_warning)
+            </td>
+            <td>Dark Warning Text Color</td>
+          </tr>
+          <tr>
+            <td>--ltc_danger</td>
+            <td>
+              <div class="color" style="background:var(--ltc_danger)"></div>
+              #ff5577
+            </td>
+            <td>Light Danger Text Color</td>
+          </tr>
+          <tr>
+            <td>--dtc_danger</td>
+            <td>
+              var(--c_danger)
+            </td>
+            <td>Dark Danger Text Color</td>
+          </tr>
+          <tr>
+            <td>--tc_on_primary</td>
+            <td>
+              var(--tc_light)
+            </td>
+            <td>Text Color on Primary Backgrounds</td>
+          </tr>
+          <tr>
+            <td>--tc_on_secondary</td>
+            <td>
+              var(--tc_light)
+            </td>
+            <td>Text Color on Secondary Backgrounds</td>
+          </tr>
+          <tr>
+            <td>--tc_on_success</td>
+            <td>
+              var(--tc_light)
+            </td>
+            <td>Text Color on Success Backgrounds</td>
+          </tr>
+          <tr>
+            <td>--tc_on_warning</td>
+            <td>
+              var(--tc_light)
+            </td>
+            <td>Text Color on Warning Backgrounds</td>
+          </tr>
+          <tr>
+            <td>--tc_on_danger</td>
+            <td>
+              var(--tc_light)
+            </td>
+            <td>Text Color on Danger Backgrounds</td>
+          </tr>
+          <tr>
+            <td>--tc_link</td>
+            <td>
+              var(--tc_primary)
+            </td>
+            <td>Link Text Colors</td>
+          </tr>
+          <tr>
+            <td>--tc_link__hover</td>
+            <td>
+              var(--tc_secondary)
+            </td>
+            <td>Link Text Colors when Hovered</td>
+          </tr>
+          <tr>
+            <td>--tc_link__inv</td>
+            <td>
+              var(--tc_primary__inv)
+            </td>
+            <td>Link Text Colors when on Inverse Backgrounds</td>
+          </tr>
+          <tr>
+            <td>--tc_link__inv__hover</td>
+            <td>
+              var(--tc_secondary__inv)
+            </td>
+            <td>Link Text Colors when on Inverse Backgrounds when Hovered</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h6 class="mb0">Read Only</h6>
+    <p><small>Use it, but don't modify it.</small></p>
+    <div class="table-wrapper mb">
+      <table>
+        <colgroup>
+          <col style="width: 20%;">
+          <col style="width: 40%;">
+          <col style="width: 20%;">
+          <col style="width: 20%;">
+       </colgroup>
+        <thead>
+          <th>Property</th>
+          <th>Description</th>
+          <th>Light Theme Value</th>
+          <th>Dark Theme Value</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>--tc</td>
+            <td>Text Color</td>
+            <td>var(--tc_dark)</td>
+            <td>var(--tc_light)</td>
+          </tr>
+          <tr>
+            <td>--tc__inv</td>
+            <td>Text Color on Inverse Backgrounds</td>
+            <td>var(--tc_light)</td>
+            <td>var(--tc_dark)</td>
+          </tr>
+          <tr>
+            <td>--tc__primary</td>
+            <td>Primary Text Color</td>
+            <td>var(--ltc_primary)</td>
+            <td>var(--dtc_primary)</td>
+          </tr>
+          <tr>
+            <td>--tc__primary__inv</td>
+            <td>Primary Text Color</td>
+            <td>var(--dtc_primary)</td>
+            <td>var(--ltc_primary)</td>
+          </tr>
+          <tr>
+            <td>--tc__secondary</td>
+            <td>Secondary Text Color</td>
+            <td>var(--ltc_secondary)</td>
+            <td>var(--dtc_secondary)</td>
+          </tr>
+          <tr>
+            <td>--tc__secondary__inv</td>
+            <td>Secondary Text Color</td>
+            <td>var(--dtc_secondary)</td>
+            <td>var(--ltc_secondary)</td>
+          </tr>
+          <tr>
+            <td>--tc__warning</td>
+            <td>Warning Text Color</td>
+            <td>var(--ltc_warning)</td>
+            <td>var(--dtc_warning)</td>
+          </tr>
+          <tr>
+            <td>--tc__warning__inv</td>
+            <td>Warning Text Color</td>
+            <td>var(--dtc_warning)</td>
+            <td>var(--ltc_warning)</td>
+          </tr>
+          <tr>
+            <td>--tc__danger</td>
+            <td>Danger Text Color</td>
+            <td>var(--ltc_danger)</td>
+            <td>var(--dtc_danger)</td>
+          </tr>
+          <tr>
+            <td>--tc__danger__inv</td>
+            <td>Danger Text Color</td>
+            <td>var(--dtc_danger)</td>
+            <td>var(--ltc_danger)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="bb">Fonts</h3>
+    <div class="table-wrapper mb">
+      <table>
+        <colgroup>
+          <col style="width: 25%;">
+          <col style="width: 25%;">
+          <col style="width: 50%;">
+        </colgroup>
+        <thead>
+          <th>Property</th>
+          <th>Default Value</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>--ff_body</td>
+            <td>"Helvetica Neue", Helvetica, Arial, sans-serif</td>
+            <td>Body Font Family</td>
+          </tr>
+          <tr>
+            <td>--ff_heading</td>
+            <td>"Helvetica Neue", Helvetica, Arial, sans-serif</td>
+            <td>Body Font Family</td>
+          </tr>
+          <tr>
+            <td>--ff_mono</td>
+            <td>Consolas, monaco, monospace</td>
+            <td>Monospace (code) Font Family</td>
+          </tr>
+          <tr>
+            <td>--fs_base</td>
+            <td>16px</td>
+            <td>Base Font Size</td>
+          </tr>
+          <tr>
+            <td>--fs_h6</td>
+            <td>var(--fs_base)</td>
+            <td>Heading 6 Font Size</td>
+          </tr>
+          <tr>
+            <td>--fs_h5</td>
+            <td>calc(1.25 * var(--fs_base))</td>
+            <td>Heading 5 Font Size</td>
+          </tr>
+          <tr>
+            <td>--fs_h4</td>
+            <td>calc(1.5 * var(--fs_base))</td>
+            <td>Heading 4 Font Size</td>
+          </tr>
+          <tr>
+            <td>--fs_h3</td>
+            <td>calc(1.75 * var(--fs_base))</td>
+            <td>Heading 3 Font Size</td>
+          </tr>
+          <tr>
+            <td>--fs_h2</td>
+            <td>calc(2 * var(--fs_base))</td>
+            <td>Heading 2 Font Size</td>
+          </tr>
+          <tr>
+            <td>--fs_h1</td>
+            <td>calc(2.4 * var(--fs_base))</td>
+            <td>Heading 1 Font Size</td>
+          </tr>
+          <tr>
+            <td>--fw_base</td>
+            <td>400</td>
+            <td>Base Font Weight</td>
+          </tr>
+          <tr>
+            <td>--fw_bold</td>
+            <td>700</td>
+            <td>Bold Font Weight</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="bb">Buttons</h3>
+    <div class="table-wrapper mb">
+      <table>
+        <colgroup>
+          <col style="width: 25%;">
+          <col style="width: 25%;">
+          <col style="width: 50%;">
+        </colgroup>
+        <thead>
+          <th>Property</th>
+          <th>Default Value</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>--l_btn_bg</td>
+            <td>
+              <div class="color" style="background:#f0f0f0"></div>
+              #f0f0f0
+            </td>
+            <td>Light Mode Button Background Color</td>
+          </tr>
+          <tr>
+            <td>--l_btn_bg__hover</td>
+            <td>
+              <div class="color" style="background:#e9e9e9"></div>
+              #e9e9e9
+            </td>
+            <td>Light Mode Button Background Color when Hovered</td>
+          </tr>
+          <tr>
+            <td>--l_btn_tc</td>
+            <td>var(--tc_dark)</td>
+            <td>Light Mode Button Text Background Color</td>
+          </tr>
+          <tr>
+            <td>--d_btn_bg</td>
+            <td>
+              <div class="color" style="background:#aaa"></div>
+              #aaaaaa
+            </td>
+            <td>Dark Mode Button Background Color</td>
+          </tr>
+          <tr>
+            <td>--d_btn_bg__hover</td>
+            <td>
+              <div class="color" style="background:#bbb"></div>
+              #bbbbbb
+            </td>
+            <td>Dark Mode Button Background Color when Hovered</td>
+          </tr>
+          <tr>
+            <td>--d_btn_tc</td>
+            <td>var(--tc_light)</td>
+            <td>Dark Mode Button Text Background Color</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h6 class="mb0">Read Only</h6>
+    <p><small>Use it, but don't modify it.</small></p>
+    <div class="table-wrapper mb">
+      <table>
+        <colgroup>
+          <col style="width: 20%;">
+          <col style="width: 40%;">
+          <col style="width: 20%;">
+          <col style="width: 20%;">
+       </colgroup>
+        <thead>
+          <th>Property</th>
+          <th>Description</th>
+          <th>Light Theme Value</th>
+          <th>Dark Theme Value</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>--btn_bg</td>
+            <td>Button Background Color</td>
+            <td>var(--l_btn_bg)</td>
+            <td>var(--d_btn_bg)</td>
+          </tr>
+          <tr>
+            <td>--btn_bg__hover</td>
+            <td>Button Background Color when Hovered</td>
+            <td>var(--l_btn_bg__hover)</td>
+            <td>var(--d_btn_bg__hover)</td>
+          </tr>
+          <tr>
+            <td>--btn_tc</td>
+            <td>Button Text Color</td>
+            <td>var(--l_btn_tc)</td>
+            <td>var(--d_btn_tc)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="bb">Misc.</h3>
+    <div class="table-wrapper mb">
+      <table>
+        <colgroup>
+          <col style="width: 25%;">
+          <col style="width: 25%;">
+          <col style="width: 50%;">
+        </colgroup>
+        <thead>
+          <th>Property</th>
+          <th>Default Value</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>--container_width</td>
+            <td>80rem</td>
+            <td>Container Max Width</td>
+          </tr>
+          <tr>
+            <td>--animation_ms</td>
+            <td>256ms</td>
+            <td>Miliseconds that animations should last</td>
+          </tr>
+          <tr>
+            <td>--radius</td>
+            <td>0.25rem</td>
+            <td>The border radius used across the site (buttons, inputs, cards, ect.)</td>
+          </tr>
+          <tr>
+            <td>--spacer</td>
+            <td>1rem</td>
+            <td>The standard size of the space between elements (when space is needed)</td>
+          </tr>
+          <tr>
+            <td>--focus_Shadow</td>
+            <td>0 0 2px 2px var(--c_primary)</td>
+            <td>The box-shadow give around an element when focused</td>
+          </tr>
+          <tr>
+            <td>--focus_shadow_on_primary</td>
+            <td>0 0 2px 2px var(--tc_on_primary)</td>
+            <td>The box-shadow give around an element when focused and on a primary background</td>
+          </tr>
+          <tr>
+            <td>--line-height</td>
+            <td>1.35em</td>
+            <td>The standard line height</td>
+          </tr>
+          <tr>
+            <td>--drop_shadow</td>
+            <td>0 0.25rem 0.5rem rgba(0, 0, 0, 0.25)</td>
+            <td>The box-shadow used to indicate elevation</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h6 class="mb0">Read Only</h6>
+    <p><small>Use it, but don't modify it.</small></p>
+    <div class="table-wrapper mb">
+      <table>
+        <colgroup>
+          <col style="width: 25%;">
+          <col style="width: 50%;">
+          <col style="width: 25%;">
+       </colgroup>
+        <thead>
+          <th>Property</th>
+          <th>Description</th>
+          <th>Calculated Value</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>--spacer_h</td>
+            <td>Half of the spacer value</td>
+            <td>calc(0.5 * var(--spacer))</td>
+          </tr>
+          <tr>
+            <td>--spacer_q</td>
+            <td>A quarter of the spacer value</td>
+            <td>calc(0.25 * var(--spacer))</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+  <div style="height: 33vh"></div>
+</body>
+</html>

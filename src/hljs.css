@@ -1,0 +1,48 @@
+.hljs-comment,
+.hljs-quote,
+.hljs-variable,
+.hljs-string {
+  color: var(--tc_success, #080)
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-name,
+.hljs-tag {
+  color: var(--tc_primary, #36f);
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-attribute,
+.hljs-literal,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-addition,
+.hljs-attr {
+  color: var(--tc_danger, #f03);
+}
+
+.hljs-deletion,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-meta,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link {
+  color: var(--tc_secondary, #93f);
+}
+
+.hljs-doctag {
+  color: var(--tc_border, #ccc);
+}
+
+.hljs-emphasis {
+  font-style: italic
+}
+
+.hljs-strong {
+  font-weight: bold
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layouts - Essential CSS</title>
+  <link rel="stylesheet" href="/src/essential.css" />
+  <link rel="stylesheet" href="/src/hljs.min.css" />
+</head>
+<body>
+  <details class="bg-primary" style="position:sticky;top:0">
+    <summary class="d-b p">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+      Navigation Menu
+    </summary>
+    <nav class="bt">
+      <a href="/">Home</a>
+      <a href="/typography.html">Typography</a>
+      <a href="/buttons.html">Buttons</a>
+      <a href="/inputs.html">Inputs</a>
+      <a href="/tables.html">Tables</a>
+      <a href="/spacing.html">Spacing and Borders</a>
+      <!-- <a href="/layouts.html">Layouts</a> -->
+      <a href="/colors.html">Colors</a>
+      <a href="/utility-classes.html">Utility Classes</a>
+      <a href="/semantic-elements.html">Sematics Elements</a>
+      <a href="/css-custom-props.html">CSS Custom Properties</a>
+    </nav>
+  </details>
+  <main>
+    <h1 class="ta-center">Layouts</h1>
+    <h3 class="bb">12 Column Grid</h3>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col span-1"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col span-11"</span>&gt;</span>11<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col span-2"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col span-10"</span>&gt;</span>10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col span-3"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col span-9"</span>&gt;</span>9<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col span-4"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col span-8"</span>&gt;</span>8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col span-5"</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col span-7"</span>&gt;</span>7<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col span-6"</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col span-6"</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <div class="row">
+          <div class="col b p span-1">1</div>
+          <div class="col b p span-11">11</div>
+          <div class="col b p span-2">2</div>
+          <div class="col b p span-10">10</div>
+          <div class="col b p span-3">3</div>
+          <div class="col b p span-9">9</div>
+          <div class="col b p span-4">4</div>
+          <div class="col b p span-8">8</div>
+          <div class="col b p span-5">5</div>
+          <div class="col b p span-7">7</div>
+          <div class="col b p span-6">6</div>
+          <div class="col b p span-6">6</div>
+        </div>
+      </div>
+    </div>
+
+    <h5 class="mt">Responsive Grid</h5>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col d-span-3 t-span-6 m-span-12"</span>&gt;</span>col<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col d-span-3 t-span-6 m-span-12"</span>&gt;</span>col<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col d-span-3 t-span-6 m-span-12"</span>&gt;</span>col<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col d-span-3 t-span-6 m-span-12"</span>&gt;</span>col<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <div class="row">
+          <div class="col b p d-span-3 t-span-6 m-span-12">col</div>
+          <div class="col b p d-span-3 t-span-6 m-span-12">col</div>
+          <div class="col b p d-span-3 t-span-6 m-span-12">col</div>
+          <div class="col b p d-span-3 t-span-6 m-span-12">col</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="bb mt">Flexbox</h3>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-f"</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex"</span>&gt;</span>Flex<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>No Flex<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-f"</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-1"</span>&gt;</span>Flex 1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-2"</span>&gt;</span>Flex 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-f"</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-1"</span>&gt;</span>Flex 1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-4"</span>&gt;</span>Flex 4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <div class="d-f mb">
+          <div class="p b flex">Flex</div>
+          <div class="p b bl0">No Flex</div>
+        </div>
+        <div class="d-f mb">
+          <div class="p b flex-1">Flex 1</div>
+          <div class="p b bl0 flex-2">Flex 2</div>
+        </div>
+        <div class="d-f mb">
+          <div class="p b flex-1">Flex 1</div>
+          <div class="p b bl0 flex-4">Flex 4</div>
+        </div>
+      </div>
+    </div>
+
+    <h5>Responsive Flexbox</h5>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-f"</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-flex-3 t-flex-1 m-flex-0"</span>&gt;</span>Col<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br />  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-flex-1 t-flex-3 m-flex-0"</span>&gt;</span>Col<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <div class="d-f mb">
+          <div class="p b d-flex-3 t-flex-1 m-flex-0">Col</div>
+          <div class="p b d-flex-1 t-flex-3 m-flex-0">Col</div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div style="height: 33vh"></div>
+</body>
+</html>

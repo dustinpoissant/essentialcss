@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spacing and Borders - Essential CSS</title>
+  <link rel="stylesheet" href="/src/essential.css" />
+  <link rel="stylesheet" href="/src/hljs.min.css" />
+</head>
+<body>
+  <details class="bg-primary" style="position:sticky;top:0">
+    <summary class="d-b p">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+      Navigation Menu
+    </summary>
+    <nav class="bt">
+      <a href="/">Home</a>
+      <a href="/typography.html">Typography</a>
+      <a href="/buttons.html">Buttons</a>
+      <a href="/inputs.html">Inputs</a>
+      <a href="/tables.html">Tables</a>
+      <!-- <a href="/spacing.html">Spacing and Borders</a> -->
+      <a href="/layouts.html">Layouts</a>
+      <a href="/colors.html">Colors</a>
+      <a href="/utility-classes.html">Utility Classes</a>
+      <a href="/semantic-elements.html">Sematics Elements</a>
+      <a href="/css-custom-props.html">CSS Custom Properties</a>
+    </nav>
+  </details>
+  <main>
+    <h1 class="ta-center">Spacing and Borders</h1>
+    <h3 class="bb">Spacing</h3>
+    <h6>Color Key:</h6>
+    <p><span class="bg-alt ph">Content</span> <span class="bg-success ph">Padding</span> <span class="bg-warning ph">Margin</span> <span class="bg-danger ph">Negative Margin</span></p>
+
+    <h5>Padding</h5>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p"</span>&gt;</span>p<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pt"</span>&gt;</span>pt<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pr"</span>&gt;</span>pr<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pb"</span>&gt;</span>pb<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pl"</span>&gt;</span>pl<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"px"</span>&gt;</span>px<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"py"</span>&gt;</span>py<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <div class="d-ib mb mr p bg-success">
+          <div class="bg-alt ph">p</div>
+        </div>
+        <div class="d-ib mb mr pt bg-success">
+          <div class="bg-alt ph">pt</div>
+        </div>
+        <div class="d-ib mb mr pr bg-success">
+          <div class="bg-alt ph">pr</div>
+        </div>
+        <div class="d-ib mb mr pb bg-success">
+          <div class="bg-alt ph">pb</div>
+        </div>
+        <div class="d-ib mb mr pl bg-success">
+          <div class="bg-alt ph">pl</div>
+        </div>
+        <div class="d-ib mb mr px bg-success">
+          <div class="bg-alt ph">px</div>
+        </div>
+        <div class="d-ib mb mr py bg-success">
+          <div class="bg-alt ph">py</div>
+        </div>
+      </div>
+    </div>
+
+    <h6>Zero Padding</h6>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p p0"</span>&gt;</span>p p0<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p pt0"</span>&gt;</span>p pt0<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p pr0"</span>&gt;</span>p pr0<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p pb0"</span>&gt;</span>p pb0<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p pl0"</span>&gt;</span>p pl0<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p px0"</span>&gt;</span>p px0<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p py0"</span>&gt;</span>p py0<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <div class="d-ib mb mr bg-success">
+          <div class="bg-alt ph">p p0</div>
+        </div>
+        <div class="d-ib mb mr p pt0 bg-success">
+          <div class="bg-alt ph">p pt0</div>
+        </div>
+        <div class="d-ib mb mr p pr0 bg-success">
+          <div class="bg-alt ph">p pr0</div>
+        </div>
+        <div class="d-ib mb mr p pb0 bg-success">
+          <div class="bg-alt ph">p pb0</div>
+        </div>
+        <div class="d-ib mb mr p pl0 bg-success">
+          <div class="bg-alt ph">p pl0</div>
+        </div>
+        <div class="d-ib mb mr p px0 bg-success">
+          <div class="bg-alt ph">p px0</div>
+        </div>
+        <div class="d-ib mb mr p py0 bg-success">
+          <div class="bg-alt ph">p py0</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <h6>Half Padding</h6>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ph"</span>&gt;</span>p<span class="hljs-tag">&lt;/<span class="hljs-name">ph</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pth"</span>&gt;</span>pth<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"prh"</span>&gt;</span>prh<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pbh"</span>&gt;</span>pbh<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"plh"</span>&gt;</span>plh<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pxh"</span>&gt;</span>pxh<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pyh"</span>&gt;</span>pyh<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <div class="d-ib mb mr ph bg-success">
+          <div class="bg-alt ph">ph</div>
+        </div>
+        <div class="d-ib mb mr pth bg-success">
+          <div class="bg-alt ph">pth</div>
+        </div>
+        <div class="d-ib mb mr prh bg-success">
+          <div class="bg-alt ph">prh</div>
+        </div>
+        <div class="d-ib mb mr pbh bg-success">
+          <div class="bg-alt ph">pbh</div>
+        </div>
+        <div class="d-ib mb mr plh bg-success">
+          <div class="bg-alt ph">plh</div>
+        </div>
+        <div class="d-ib mb mr pxh bg-success">
+          <div class="bg-alt ph">pxh</div>
+        </div>
+        <div class="d-ib mb mr pyh bg-success">
+          <div class="bg-alt ph">pyh</div>
+        </div>
+      </div>
+    </div>
+    
+    <h6>Quarter Padding</h6>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pq"</span>&gt;</span>pq<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ptq"</span>&gt;</span>ptq<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"prq"</span>&gt;</span>prq<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pbq"</span>&gt;</span>pbq<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"plq"</span>&gt;</span>plq<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pxq"</span>&gt;</span>pxq<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pyq"</span>&gt;</span>pyq<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <div class="d-ib mb mr pq bg-success">
+          <div class="bg-alt ph">pq</div>
+        </div>
+        <div class="d-ib mb mr ptq bg-success">
+          <div class="bg-alt ph">ptq</div>
+        </div>
+        <div class="d-ib mb mr prq bg-success">
+          <div class="bg-alt ph">prq</div>
+        </div>
+        <div class="d-ib mb mr pbq bg-success">
+          <div class="bg-alt ph">pbq</div>
+        </div>
+        <div class="d-ib mb mr plq bg-success">
+          <div class="bg-alt ph">plq</div>
+        </div>
+        <div class="d-ib mb mr pxq bg-success">
+          <div class="bg-alt ph">pxq</div>
+        </div>
+        <div class="d-ib mb mr pyq bg-success">
+          <div class="bg-alt ph">pyq</div>
+        </div>
+      </div>
+    </div>
+
+    <h5>Margin</h5>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m"</span>&gt;</span>m<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt"</span>&gt;</span>mt<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mr"</span>&gt;</span>mr<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb"</span>&gt;</span>mb<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ml"</span>&gt;</span>ml<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mx"</span>&gt;</span>mx<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my"</span>&gt;</span>my<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <div class="d-ib mb mr p bg-warning">
+          <div class="bg-alt ph">m</div>
+        </div>
+        <div class="d-ib mb mr pt bg-warning">
+          <div class="bg-alt ph">mt</div>
+        </div>
+        <div class="d-ib mb mr pr bg-warning">
+          <div class="bg-alt ph">mr</div>
+        </div>
+        <div class="d-ib mb mr pb bg-warning">
+          <div class="bg-alt ph">mb</div>
+        </div>
+        <div class="d-ib mb mr pl bg-warning">
+          <div class="bg-alt ph">ml</div>
+        </div>
+        <div class="d-ib mb mr px bg-warning">
+          <div class="bg-alt ph">mx</div>
+        </div>
+        <div class="d-ib mb mr py bg-warning">
+          <div class="bg-alt ph">my</div>
+        </div>
+      </div>
+    </div>
+
+    <h6>Zero Margin</h6>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m p0"</span>&gt;</span>m m0<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m pt0"</span>&gt;</span>m mt0<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m pr0"</span>&gt;</span>m mr0<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m pb0"</span>&gt;</span>m mb0<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m pl0"</span>&gt;</span>m ml0<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m px0"</span>&gt;</span>m mx0<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m py0"</span>&gt;</span>m my0<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <div class="d-ib mr mb bg-warning">
+          <div class="bg-alt ph">m m0</div>
+        </div>
+        <div class="d-ib mr mb p pt0 bg-warning">
+          <div class="bg-alt ph">m mt0</div>
+        </div>
+        <div class="d-ib mr mb p pr0 bg-warning">
+          <div class="bg-alt ph">m mr0</div>
+        </div>
+        <div class="d-ib mr mb p pb0 bg-warning">
+          <div class="bg-alt ph">m mb0</div>
+        </div>
+        <div class="d-ib mr mb p pl0 bg-warning">
+          <div class="bg-alt ph">m ml0</div>
+        </div>
+        <div class="d-ib mr mb p px0 bg-warning">
+          <div class="bg-alt ph">m mx0</div>
+        </div>
+        <div class="d-ib mr mb p py0 bg-warning">
+          <div class="bg-alt ph">m my0</div>
+        </div>
+      </div>
+    </div>
+
+    <h6>Negative Margin</h6>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-m"</span>&gt;</span>-m<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-mt"</span>&gt;</span>-mt<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-mr"</span>&gt;</span>-mr<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-mb"</span>&gt;</span>-mb<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-ml"</span>&gt;</span>-ml<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-mx"</span>&gt;</span>-mx<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-my"</span>&gt;</span>-my<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <div class="d-ib mr mb p bg-danger">
+          <div class="bg-alt ph">-m</div>
+        </div>
+        <div class="d-ib mr mb pt bg-danger">
+          <div class="bg-alt ph">-mt</div>
+        </div>
+        <div class="d-ib mr mb pr bg-danger">
+          <div class="bg-alt ph">-mr</div>
+        </div>
+        <div class="d-ib mr mb pb bg-danger">
+          <div class="bg-alt ph">-mb</div>
+        </div>
+        <div class="d-ib mr mb pl bg-danger">
+          <div class="bg-alt ph">-ml</div>
+        </div>
+        <div class="d-ib mr mb px bg-danger">
+          <div class="bg-alt ph">-mx</div>
+        </div>
+        <div class="d-ib mr mb py bg-danger">
+          <div class="bg-alt ph">-my</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="bb">Border</h3>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"b"</span>&gt;</span>b<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bt"</span>&gt;</span>bt<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"br"</span>&gt;</span>br<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bb"</span>&gt;</span>bb<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bl"</span>&gt;</span>bl<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bx"</span>&gt;</span>bx<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"by"</span>&gt;</span>by<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <div class="d-ib p b mr mb bg-alt">b</div>
+        <div class="d-ib p bt mr mb bg-alt">bt</div>
+        <div class="d-ib p br mr mb bg-alt">br</div>
+        <div class="d-ib p bb mr mb bg-alt">bb</div>
+        <div class="d-ib p bl mr mb bg-alt">bl</div>
+        <div class="d-ib p bx mr mb bg-alt">bx</div>
+        <div class="d-ib p by mr mb bg-alt">by</div>
+      </div>
+    </div>
+
+    <h6>Zero Border</h6>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"b b0"</span>&gt;</span>b b0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"b bt0"</span>&gt;</span>b bt0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"b br0"</span>&gt;</span>b br0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"b bb0"</span>&gt;</span>b bb0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"b bl0"</span>&gt;</span>b bl0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"b bx0"</span>&gt;</span>b bx0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"b by0"</span>&gt;</span>b by0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <div class="d-ib p mr mb bg-alt">b b0</div>
+        <div class="d-ib p b bt0 mr mb bg-alt">b bt0</div>
+        <div class="d-ib p b br0 mr mb bg-alt">b br0</div>
+        <div class="d-ib p b bb0 mr mb bg-alt">b bb0</div>
+        <div class="d-ib p b bl0 mr mb bg-alt">b bl0</div>
+        <div class="d-ib p b bx0 mr mb bg-alt">b bx0</div>
+        <div class="d-ib p b by0 mr mb bg-alt">b by0</div>
+      </div>
+    </div>
+
+    <h3 class="bb">Radius</h3>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"r"</span>&gt;</span>r<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"rtl"</span>&gt;</span>rtl<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"rt"</span>&gt;</span>rt<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"rtr"</span>&gt;</span>rtr<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"rr"</span>&gt;</span>rr<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"rbr"</span>&gt;</span>rbr<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"rb"</span>&gt;</span>rb<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"rbl"</span>&gt;</span>rbl<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"rl"</span>&gt;</span>rl<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <div class="d-ib ph mr mb b bg-alt r">r</div>
+        <div class="d-ib ph mr mb b bg-alt rtl">rtl</div>
+        <div class="d-ib ph mr mb b bg-alt rt">rt</div>
+        <div class="d-ib ph mr mb b bg-alt rtr">rtr</div>
+        <div class="d-ib ph mr mb b bg-alt rr">rr</div>
+        <div class="d-ib ph mr mb b bg-alt rbr">rbr</div>
+        <div class="d-ib ph mr mb b bg-alt rb">rb</div>
+        <div class="d-ib ph mr mb b bg-alt rbl">rbl</div>
+        <div class="d-ib ph mr mb b bg-alt rl">rl</div>
+      </div>
+    </div>
+
+    <h6>Zero Radius</h6>
+    <div class="row -mx">
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"r r0"</span>&gt;</span>r r0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"r rtl0"</span>&gt;</span>r rtl0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"r rt0"</span>&gt;</span>r rt0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"r rtr0"</span>&gt;</span>r rtr0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"r rr0"</span>&gt;</span>r rr0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"r rbr0"</span>&gt;</span>r rbr0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"r rb0"</span>&gt;</span>r rb0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"r rbl0"</span>&gt;</span>r rbl0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br /><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"r rl0"</span>&gt;</span>r rl0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+      <div class="col px d-span-6 t-span-6 m-span-12">
+        <div class="d-ib ph mr mb b bg-alt r r0">r r0</div>
+        <div class="d-ib ph mr mb b bg-alt r rtl0">r rtl0</div>
+        <div class="d-ib ph mr mb b bg-alt r rt0">r rt0</div>
+        <div class="d-ib ph mr mb b bg-alt r rtr0">r rtr0</div>
+        <div class="d-ib ph mr mb b bg-alt r rr0">r rr0</div>
+        <div class="d-ib ph mr mb b bg-alt r rbr0">r rbr0</div>
+        <div class="d-ib ph mr mb b bg-alt r rb0">r rb0</div>
+        <div class="d-ib ph mr mb b bg-alt r rbl0">r rbl0</div>
+        <div class="d-ib ph mr mb b bg-alt r rl0">r rl0</div>
+      </div>
+    </div>
+  </main>
+  <div style="height: 33vh"></div>
+</body>
+</html>
