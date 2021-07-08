@@ -1,0 +1,26 @@
+{
+  "name": "essentialcss",
+  "version": "1.0.0",
+  "description": "A basic stylehseet used as starting point for projects",
+  "main": "dist/essential.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dustinpoissant/essentialcss.git"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "design",
+    "system",
+    "styles"
+  ],
+  "author": "Dustin Poissant",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dustinpoissant/essentialcss/issues"
+  },
+  "homepage": "https://github.com/dustinpoissant/essentialcss#readme"
+}
