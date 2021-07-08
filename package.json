@@ -1,6 +1,6 @@
 {
   "name": "essentialcss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A basic stylehseet used as starting point for projects",
   "main": "dist/essential.css",
   "scripts": {

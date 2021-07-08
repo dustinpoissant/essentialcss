@@ -1,0 +1,4 @@
+*.html
+src
+.gitignore
+node_modules
