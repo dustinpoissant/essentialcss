@@ -496,7 +496,7 @@ li ul {
 /*
   Buttons
 */
-button:not(.no-btn),
+button:not(.no-btn):not(.no-style),
 .btn,
 input[type="button"],
 input[type="submit"],
@@ -513,7 +513,7 @@ input[type="reset"] {
   text-decoration: none;
   box-shadow: var(--btn_box_shadow);
 }
-button:not(.no-btn):hover,
+button:not(.no-btn):not(.no-style):hover,
 .btn:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover,
@@ -522,7 +522,7 @@ input[type="reset"]:hover {
   color: var(--btn_tc);
   box-shadow: var(--btn_box_shadow__hover);
 }
-button:not(.no-btn):focus,
+button:not(.no-btn):not(.no-style):focus,
 .btn:focus,
 input[type="button"]:focus,
 input[type="submit"]:focus,
@@ -530,7 +530,7 @@ input[type="reset"]:focus {
   box-shadow: var(--btn_box_shadow__hover), var(--focus_shadow);
   z-index: 1;
 }
-button:not(.no-btn):disabled,
+button:not(.no-btn):not(.no-style):disabled,
 .btn[disabled],
 input[type="button"]:disabled,
 input[type="submit"]:disabled,
@@ -543,7 +543,7 @@ input[type="button"].primary,
 input[type="submit"].primary,
 input[type="reset"].primary {
   background-color: var(--c_primary);
-  color: var(--tc_on_primary);
+  --btn_tc: var(--tc_on_primary);
 }
 button:not(.no-btn).primary:hover,
 .btn.primary:hover,
@@ -558,7 +558,7 @@ input[type="button"].secondary,
 input[type="submit"].secondary,
 input[type="reset"].secondary {
   background-color: var(--c_secondary);
-  color: var(--tc_on_secondary);
+  --btn_tc: var(--tc_on_secondary);
 }
 button:not(.no-btn).secondary:hover,
 .btn.secondary:hover,
@@ -573,7 +573,7 @@ input[type="button"].success,
 input[type="submit"].success,
 input[type="reset"].success {
   background-color: var(--c_success);
-  color: var(--tc_on_success);
+  --btn_tc: var(--tc_on_success);
 }
 button:not(.no-btn).success:hover,
 .btn.success:hover,
@@ -588,7 +588,7 @@ input[type="button"].warning,
 input[type="submit"].warning,
 input[type="reset"].warning {
   background-color: var(--c_warning);
-  color: var(--tc_on_warning);
+  --btn_tc: var(--tc_on_warning);
 }
 button:not(.no-btn).warning:hover,
 .btn.warning:hover,
@@ -603,7 +603,7 @@ input[type="button"].danger,
 input[type="submit"].danger,
 input[type="reset"].danger {
   background-color: var(--c_danger);
-  color: var(--tc_on_danger);
+  --btn_tc: var(--tc_on_danger);
 }
 button:not(.no-btn).danger:hover,
 .btn.danger:hover,
@@ -612,13 +612,15 @@ input[type="submit"].danger:hover,
 input[type="reset"].danger:hover {
   background-color: var(--c_danger__hover);
 }
-button:not(.no-btn).link,
+button:not(.no-btn):not(.no-style).link,
 .btn.link,
 input[type="button"].link,
 input[type="submit"].link,
 input[type="reset"].link {
   background-color: transparent;
   color: inherit;
+  box-shadow: 0 0 0 transparent;
+  border: none;
 }
 .btn-grp {
   display: inline-flex;
