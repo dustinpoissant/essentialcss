@@ -7,5 +7,5 @@ await mkdir('./docs/src', { recursive: true });
 await mkdir('./dist', { recursive: true });
 
 const minifiedCSS = await minify('./src/essential.css')
-writeFile('./docs/src/essntial.css', minifiedCSS);
-writeFile('./dist/essntial.css', minifiedCSS);
+writeFile('./docs/src/essential.css', minifiedCSS);
+writeFile('./dist/essential.css', minifiedCSS);
