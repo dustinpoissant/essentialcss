@@ -385,17 +385,14 @@ li ul {
 .p, .pr, .px { padding-right: var(--spacer) }
 .p, .pb, .py { padding-bottom: var(--spacer) }
 .p, .pl, .px { padding-left: var(--spacer) }
-
 .ph, .pth, .pyh { padding-top: var(--spacer_h) }
 .ph, .prh, .pxh { padding-right: var(--spacer_h) }
 .ph, .pbh, .pyh { padding-bottom: var(--spacer_h) }
 .ph, .plh, .pxh { padding-left: var(--spacer_h) }
-
 .pq, .ptq, .pyq { padding-top: var(--spacer_q) }
 .pq, .prq, .pxq { padding-right: var(--spacer_q) }
 .pq, .pbq, .pyq { padding-bottom: var(--spacer_q) }
 .pq, .plq, .pxq { padding-left: var(--spacer_q) }
-
 .p0, .pt0, .py0 { padding-top: 0.1px }
 .p0, .pr0, .px0 { padding-right: 0.1px }
 .p0, .pb0, .py0 { padding-bottom: 0.1px }
@@ -404,6 +401,14 @@ li ul {
 .m, .mr, .mx { margin-right: var(--spacer) }
 .m, .mb, .my { margin-bottom: var(--spacer) }
 .m, .ml, .mx { margin-left: var(--spacer) }
+.mh, .mth, .myh { margin-top: var(--spacer_h) }
+.mh, .mrh, .mxh { margin-right: var(--spacer_h) }
+.mh, .mbh, .myh { margin-bottom: var(--spacer_h) }
+.mh, .mlh, .mxh { margin-left: var(--spacer_h) }
+.mq, .mtq, .myq { margin-top: var(--spacer_q) }
+.mq, .mrq, .mxq { margin-right: var(--spacer_q) }
+.mq, .mbq, .myq { margin-bottom: var(--spacer_q) }
+.mq, .mlq, .mxq { margin-left: var(--spacer_q) }
 .m0, .mt0, .my0 { margin-top: 0 }
 .m0, .mr0, .mx0 { margin-right: 0 }
 .m0, .mb0, .my0 { margin-bottom: 0 }
@@ -659,6 +664,10 @@ input[type="reset"].link {
 .no-btn:focus {
   box-shadow: var(--focus_shadow);
 }
+.full {
+  display: block;
+  width: 100%;
+}
 
 /*
   Inputs
@@ -688,8 +697,7 @@ select:disabled,
 textarea:disabled,
 input[type="checkbox"]:disabled,
 input[type="radio"]:disabled {
-  border: 2px solid var(--c_bg__alt);
-  opacity: 0.9;
+  opacity: 0.6;
 }
 textarea,
 select[multiple] {
@@ -722,6 +730,17 @@ select[multiple] {
 }
 select[multiple] option {
   padding: var(--spacer_h) var(--spacer);
+}
+input[type="color"] {
+  padding: 0 !important;
+  height: 2.35em;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border-radius: var(--radius, 0.25rem);
+  cursor: pointer;
 }
 
 /*
@@ -793,6 +812,7 @@ tr:last-child td:last-child {
 .bg-primary {
   --tc_link: var(--tc_on_primary);
   --tc_link__hover: var(--tc_on_primary);
+  --c_border: var(--tc_on_primary);
 
   background-color: var(--c_primary);
   color: var(--tc_on_primary);
