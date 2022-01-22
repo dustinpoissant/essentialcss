@@ -671,7 +671,7 @@
           <tr>
             <td>--l_btn_tc</td>
             <td>var(--tc_dark)</td>
-            <td>Light Mode Button Text Background Color</td>
+            <td>Light Mode Button Text Color</td>
           </tr>
           <tr>
             <td>--d_btn_bg</td>
@@ -691,8 +691,24 @@
           </tr>
           <tr>
             <td>--d_btn_tc</td>
-            <td>var(--tc_light)</td>
-            <td>Dark Mode Button Text Background Color</td>
+            <td>var(--tc_dark)</td>
+            <td>Dark Mode Button Text Color</td>
+          </tr>
+          <tr>
+            <td>--l_btn_transparent__hover</td>
+            <td>
+              <div class="color" style="background:rgba(0, 0, 0, 0.05)"></div>
+              rgba(0, 0, 0, 0.05)
+            </td>
+            <td>The background color of transparent buttons when hovered in light mode</td>
+          </tr>
+          <tr>
+            <td>--d_btn_transparent__hover</td>
+            <td>
+              <div class="color" style="background:rgba(255, 255, 255, 0.05)"></div>
+              rgba(255, 255, 255, 0.05)
+            </td>
+            <td>The background color of transparent buttons when hovered in dark mode</td>
           </tr>
         </tbody>
       </table>
@@ -732,6 +748,12 @@
             <td>Button Text Color</td>
             <td>var(--l_btn_tc)</td>
             <td>var(--d_btn_tc)</td>
+          </tr>
+          <tr>
+            <td>--btn_transparent__hover</td>
+            <td>The background color of transparent buttons when hovered</td>
+            <td>var(--l_btn_transparent__hover)</td>
+            <td>var(--d_btn_transparent__hover)</td>
           </tr>
         </tbody>
       </table>
